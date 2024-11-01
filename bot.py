@@ -1,8 +1,3 @@
-# Install required libraries
-# Make sure to run this command separately in your terminal first:
-# pip install python-telegram-bot yt-dlp instaloader nest_asyncio
-
-# Import required libraries
 import nest_asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
@@ -85,6 +80,4 @@ async def run_bot() -> None:
     await application.run_polling()
 
 # Run the bot in the event loop
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(run_bot())
+await run_bot()
